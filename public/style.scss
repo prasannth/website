@@ -1,0 +1,1019 @@
+// Import Bulma's core
+@import "~bulma/sass/utilities/_all";
+$fullhd: 1600px;
+// Set your colors
+$background: #f2f2f3;
+$scheme-main: $background;
+
+$primary: #314ce0;
+$primary-invert: findColorInvert($primary);
+
+$success: #2ec1ac;
+
+$secondary: #eeeeee;
+$secondary-invert: findColorInvert($primary);
+
+$scheme-invert: #111;
+$twitter: #4099ff;
+$twitter-invert: findColorInvert($twitter);
+
+$white: #fff;
+$text: $black;
+
+$teel: #32e0c4;
+$teel-invert: findColorInvert($teel);
+
+$border-light: $white;
+
+$subtext-color: rgb(135, 140, 147);
+
+$navbar-dropdown-min-width: 50rem;
+
+$navbar-item-hover-color: hsl(217, 71%, 53%);
+$navbar-item-hover-background-color: hsl(0, 0%, 98%);
+
+$dropdown-content-background-color: $white;
+
+//button size
+$button-padding-horizontal: 5rem;
+$button-padding-vertical: 2rem;
+$button-family: "PT Serif", serif;
+
+// Custom Variables
+$navbar-box-shadow-size: 0 1px 0 0;
+$navbar-item-color: black !important;
+$navbar-box-shadow-color: hsl(0, 0%, 96%);
+$navbar-item-hover-color: hsl(217, 71%, 53%);
+
+$hero-body-padding: 3rem 6rem;
+$hero-body-padding-small: 3rem;
+$hero-body-padding-medium: 9rem 6rem;
+$hero-body-padding-large: 18rem 6rem;
+
+$checkbox-border-width: 2px;
+$checkbox-border-radius: 50px;
+
+$checkbox-background-color: $white;
+$checkbox-border-color: $primary;
+$checkbox-active-background-color: $primary;
+
+$carousel-arrow-icon-spaced: 1.5rem;
+$carousel-arrow-color: $white;
+$carousel-arrow-background: $primary;
+$carousel-list-backgrounds: $white;
+
+$card-footer-padding: 0.5rem;
+$card-color: $primary;
+
+$subtitle-color: $subtext-color;
+$subtitle-weight: 400;
+
+$card-footer-border-top: 1px solid $border-light;
+
+$card-shadow: 0 0.5em 1em -0.125em rgba($scheme-invert, 0.1),
+  0 0px 0 1px rgba($scheme-invert, 0.02);
+
+// progress bar
+$progress-border-radius: 0px;
+$progress-indeterminate-duration: 2s;
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+  "white": (
+    $white,
+    $white,
+  ),
+  "black": (
+    $black,
+    $white,
+  ),
+  "light": (
+    $light,
+    $light-invert,
+  ),
+  "dark": (
+    $dark,
+    $dark-invert,
+  ),
+  "primary": (
+    $primary,
+    $primary-invert,
+  ),
+  "secondary": (
+    $secondary,
+    $secondary-invert,
+  ),
+  "info": (
+    $info,
+    $info-invert,
+  ),
+  "success": (
+    $success,
+    $success-invert,
+  ),
+  "warning": (
+    $warning,
+    $warning-invert,
+  ),
+  "danger": (
+    $danger,
+    $danger-invert,
+  ),
+  "twitter": (
+    $twitter,
+    $twitter-invert,
+  ),
+  "teel": (
+    $teel,
+    $teel-invert,
+  ),
+);
+
+// Links
+$link: $subtext-color;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Import Bulma and Buefy styles
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
+
+div.title {
+  font-family: "PT Serif", serif;
+  font-weight: 100;
+}
+div.subtitle {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: medium;
+}
+
+* {
+  margin: 0;
+}
+
+.is-top-rounded {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+img.is-top-rounded.hotspot-card-image {
+  height: 180px;
+}
+
+body {
+  background-color: $background;
+}
+.background-color-white {
+  background-color: white;
+}
+.card {
+  border-radius: 15px;
+}
+
+.carousel-list.has-shadow {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+.background-home {
+  background-image: url("https://cdn0.canvaspop.com/zpacoK5R-toji99FHiHHxXUzGTc=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-homepage-lg.395422855a.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+}
+.background-1 {
+  background-image: url("https://cdn0.canvaspop.com/tmwanmbS8_F1CJ2UG8ixeQaNQ_Y=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-canvas-prints-lg.a8af739a37.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+}
+.background-2 {
+  background-image: url("https://cdn0.canvaspop.com/OrR3RrrqhLlRexrct-KaJv384Rs=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-framed-prints-lg.b923329d4e.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+}
+.background-3 {
+  background-image: url("https://cdn0.canvaspop.com/lD5a3FUB-X8OyZ4AVZ-UBv9L8jE=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-photo-collages-lg.a712b91a66.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+}
+.background-4 {
+  background-image: url("https://cdn0.canvaspop.com/Lb5Tel2KJvN5e7T3I_1M_C2jgWA=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-triptych-prints-lg.ffbdeac7e1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+}
+.background-5 {
+  background-image: url("https://cdn0.canvaspop.com/pCRvzla7JQaNkTXDzhQsRbGfMLs=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-pet-portraits-lg.f6ec76467c.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+}
+
+.background-offers {
+  background-image: url("https://media.graphcms.com/kjX1btkdSEmu02slFLAm");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+}
+.background-gifts {
+  background-image: url("https://cdn0.canvaspop.com/Ig6HVLRNzm_KIoL0Z8evL5tPL2M=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-gifts-holiday-lg.fe1c86d580.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 300px;
+}
+
+.mobile-background-home {
+  background-image: url("https://cdn0.canvaspop.com/zpacoK5R-toji99FHiHHxXUzGTc=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-homepage-lg.395422855a.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  min-height: 300px;
+}
+.mobile-background-1 {
+  background-image: url("https://cdn0.canvaspop.com/tmwanmbS8_F1CJ2UG8ixeQaNQ_Y=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-canvas-prints-lg.a8af739a37.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  min-height: 300px;
+}
+.mobile-background-2 {
+  background-image: url("https://cdn0.canvaspop.com/OrR3RrrqhLlRexrct-KaJv384Rs=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-framed-prints-lg.b923329d4e.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  min-height: 300px;
+}
+.mobile-background-3 {
+  background-image: url("https://cdn0.canvaspop.com/lD5a3FUB-X8OyZ4AVZ-UBv9L8jE=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-photo-collages-lg.a712b91a66.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  min-height: 300px;
+}
+.mobile-background-4 {
+  background-image: url("https://cdn0.canvaspop.com/Lb5Tel2KJvN5e7T3I_1M_C2jgWA=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-triptych-prints-lg.ffbdeac7e1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  min-height: 300px;
+}
+.mobile-background-5 {
+  background-image: url("https://cdn0.canvaspop.com/pCRvzla7JQaNkTXDzhQsRbGfMLs=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-pet-portraits-lg.f6ec76467c.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  min-height: 300px;
+}
+
+.mobile-background-offers {
+  background-image: url("https://media.graphcms.com/kjX1btkdSEmu02slFLAm");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  min-height: 300px;
+}
+.mobile-background-gifts {
+  background-image: url("https://cdn0.canvaspop.com/Ig6HVLRNzm_KIoL0Z8evL5tPL2M=/1536x718/filters:format(webp)/static.canvaspop.com/static/redesign/img/heroes/hero-gifts-holiday-lg.fe1c86d580.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  min-height: 300px;
+}
+
+// .background-2 {
+//   background-image: url("https://source.unsplash.com/random");
+//   min-height: 350px;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: right;
+// }
+
+.offer-card {
+  width: 390px;
+  min-height: 250px;
+}
+
+.card-image {
+  display: block;
+  position: relative;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card-image-top-radius {
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
+}
+
+.self-center {
+  align-self: center;
+}
+.justify-center {
+  justify-items: center;
+}
+.text-center {
+  text-align: center;
+  text-align: -webkit-center;
+}
+.text-right {
+  text-align: right;
+}
+
+.is-400x400 {
+  width: 600px;
+  height: auto;
+}
+
+img.image-object-fit {
+  object-fit: none;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+.w-25 {
+  width: 25% !important;
+}
+
+.m-100 {
+  margin: 100px !important;
+}
+.h-400 {
+  height: 400px !important;
+}
+
+// Margin Right
+.mr-1 {
+  margin-right: 0.25rem !important;
+}
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+.mr-3 {
+  margin-right: 0.75rem !important;
+}
+.mr-4 {
+  margin-right: 1rem !important;
+}
+.mr-5 {
+  margin-right: 1.55rem !important;
+}
+.mr-6 {
+  margin-right: 3rem !important;
+}
+
+// Margin Left
+
+.ml-1 {
+  margin-left: 0.25rem !important;
+}
+.ml-2 {
+  margin-left: 0.5rem !important;
+}
+.ml-3 {
+  margin-left: 0.75rem !important;
+}
+.ml-4 {
+  margin-left: 1rem !important;
+}
+.ml-5 {
+  margin-left: 1.55rem !important;
+}
+.ml-6 {
+  margin-left: 3rem !important;
+}
+
+// Margin Top
+
+.mt-0 {
+  margin-top: 0rem !important;
+}
+.mt-1 {
+  margin-top: 0.25rem !important;
+}
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+.mt-3 {
+  margin-top: 0.75rem !important;
+}
+.mt-4 {
+  margin-top: 1rem !important;
+}
+.mt-5 {
+  margin-top: 1.55rem !important;
+}
+.mt-6 {
+  margin-top: 3rem !important;
+}
+
+// Margin Button
+
+.mb-0 {
+  margin-bottom: 0rem !important;
+}
+.mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+.mb-3 {
+  margin-bottom: 0.75rem !important;
+}
+.mb-4 {
+  margin-bottom: 1rem !important;
+}
+.mb-5 {
+  margin-bottom: 1.55rem !important;
+}
+.mb-6 {
+  margin-bottom: 3rem !important;
+}
+
+// Border Radius
+
+.br-0 {
+  border-radius: 0rem !important;
+}
+.br-1 {
+  border-radius: 0.25rem !important;
+}
+.br-2 {
+  border-radius: 0.5rem !important;
+}
+.br-3 {
+  border-radius: 0.75rem !important;
+}
+.br-4 {
+  border-radius: 1rem !important;
+}
+.br-5 {
+  border-radius: 1.55rem !important;
+}
+.br-6 {
+  border-radius: 3rem !important;
+}
+
+.br-1 {
+  border-radius: 0.25rem !important;
+}
+.br-2 {
+  border-radius: 0.5rem !important;
+}
+.br-3 {
+  border-radius: 0.75rem !important;
+}
+.br-4 {
+  border-radius: 1rem !important;
+}
+.br-5 {
+  border-radius: 1.55rem !important;
+}
+.br-6 {
+  border-radius: 3rem !important;
+}
+
+// Margin
+
+.m-0 {
+  margin: 0rem !important;
+}
+.m-1 {
+  margin: 0.25rem !important;
+}
+.m-2 {
+  margin: 0.5rem !important;
+}
+.m-3 {
+  margin: 0.75rem !important;
+}
+.m-4 {
+  margin: 1rem !important;
+}
+.m-5 {
+  margin: 1.55rem !important;
+}
+.m-6 {
+  margin: 3rem !important;
+}
+
+// Padding
+
+.p-0 {
+  padding: 0rem !important;
+}
+.p-1 {
+  padding: 0.25rem !important;
+}
+.p-2 {
+  padding: 0.5rem !important;
+}
+.p-3 {
+  padding: 0.75rem !important;
+}
+.p-4 {
+  padding: 1rem !important;
+}
+.p-5 {
+  padding: 1.5rem !important;
+}
+.p-6 {
+  padding: 2rem !important;
+}
+.p-7 {
+  padding: 3rem !important;
+}
+
+.pb-0 {
+  padding-bottom: 0rem !important;
+}
+.pb-1 {
+  padding-bottom: 0.25rem !important;
+}
+.pb-2 {
+  padding-bottom: 0.5rem !important;
+}
+.pb-3 {
+  padding-bottom: 0.75rem !important;
+}
+.pb-4 {
+  padding-bottom: 1rem !important;
+}
+.pb-5 {
+  padding-bottom: 1.5rem !important;
+}
+.pb-6 {
+  padding-bottom: 2rem !important;
+}
+.pb-7 {
+  padding-bottom: 3rem !important;
+}
+.pb-100 {
+  padding-bottom: 100px !important;
+}
+
+.pt-0 {
+  padding-top: 0rem !important;
+}
+.pt-1 {
+  padding-top: 0.25rem !important;
+}
+.pt-2 {
+  padding-top: 0.5rem !important;
+}
+.pt-3 {
+  padding-top: 0.75rem !important;
+}
+.pt-4 {
+  padding-top: 1rem !important;
+}
+.pt-5 {
+  padding-top: 1.5rem !important;
+}
+.pt-6 {
+  padding-top: 2rem !important;
+}
+.pt-7 {
+  padding-top: 3rem !important;
+}
+
+.pl-0 {
+  padding-left: 0rem !important;
+}
+.pl-1 {
+  padding-left: 0.25rem !important;
+}
+.pl-2 {
+  padding-left: 0.5rem !important;
+}
+.pl-3 {
+  padding-left: 0.75rem !important;
+}
+.pl-4 {
+  padding-left: 1rem !important;
+}
+.pl-5 {
+  padding-left: 1.5rem !important;
+}
+.pl-6 {
+  padding-left: 2rem !important;
+}
+.pl-7 {
+  padding-left: 3rem !important;
+}
+.pl-8 {
+  padding-left: 5rem !important;
+}
+.pl-9 {
+  padding-left: 7rem !important;
+}
+.pl-10 {
+  padding-left: 10rem !important;
+}
+
+.pr-0 {
+  padding-right: 0rem !important;
+}
+.pr-1 {
+  padding-right: 0.25rem !important;
+}
+.pr-2 {
+  padding-right: 0.5rem !important;
+}
+.pr-3 {
+  padding-right: 0.75rem !important;
+}
+.pr-4 {
+  padding-right: 1rem !important;
+}
+.pr-5 {
+  padding-right: 1.5rem !important;
+}
+.pr-6 {
+  padding-right: 2rem !important;
+}
+.pr-7 {
+  padding-right: 3rem !important;
+}
+.pr-8 {
+  padding-right: 5rem !important;
+}
+.pr-9 {
+  padding-right: 7rem !important;
+}
+.pr-10 {
+  padding-right: 10rem !important;
+}
+
+.is-circle {
+  border-radius: 100px;
+}
+
+.content-start {
+  margin-top: 50px !important;
+}
+
+.h-100 {
+  max-height: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+.size-button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.button.is-btn {
+  padding: 1rem;
+}
+
+.button.is-btn-small {
+  font-size: smaller;
+  padding: 1rem !important;
+  margin: 0.8rem !important;
+}
+
+.is-title {
+  color: #111 !important;
+}
+.is-subtitle {
+  color: $subtext-color !important;
+}
+
+.is-bold {
+  color: black !important;
+  font-weight: 500 !important;
+}
+
+.is-bolder {
+  color: black !important;
+  font-size: xx-large !important;
+  font-weight: 600 !important;
+}
+
+.offer-card-mobile {
+  min-height: 180px;
+}
+
+.is-white {
+  color: white !important;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 60px;
+  color: $primary !important;
+  background-color: white;
+}
+
+.bottom-item {
+  color: $dark !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  flex-grow: 1;
+  text-align: center;
+  flex: 1;
+}
+
+.design-content {
+  top: 90px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  display: block;
+  position: fixed;
+  background-color: #ebebeb;
+  align-self: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.bottom-sheet-dialog {
+  transition: all 0.5s ease-in-out;
+  height: 300px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  padding: 20px;
+}
+
+.is-flex-1 {
+  flex-grow: 1;
+  flex: 1;
+}
+
+div.active {
+  animation-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  background-color: #314ce0;
+  color: white !important;
+  padding: 5px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  transition: all 200ms ease-out;
+}
+.active-item {
+  color: white;
+}
+
+.checkout-footer {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  padding: 20px;
+}
+
+.align-center {
+  align-items: center;
+}
+.align-self-center {
+  align-self: center;
+}
+p.subtitle {
+  margin-block-start: 0px !important;
+  margin-block-end: 0px !important;
+}
+
+span.is-status {
+  padding: 8px;
+  background-color: #c4fb6d;
+  border-radius: 3rem;
+  border-width: 1px;
+  border: #76ead7 1px solid;
+  color: #393e46 !important;
+}
+
+.text-white {
+  color: white !important;
+}
+.text-white:hover {
+  color: black !important;
+}
+
+.min-height-100 {
+  min-height: 100% !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.padding-top-bottom {
+  padding-left: 6rem !important;
+  padding-right: 6rem !important;
+  padding-top: 1rem !important;
+  padding-bottom: 0rem !important;
+}
+
+.right-tool-panel {
+  position: fixed;
+  right: 0;
+  bottom: 10rem !important;
+  top: 90px;
+  overflow: overlay;
+}
+
+.checkout-bar {
+  z-index: 1000;
+  width: 100%;
+  top: 0;
+  right: 0;
+  position: fixed;
+  padding: 1rem;
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.26);
+}
+
+.frame-view {
+  position: fixed;
+  top: 200px;
+}
+
+.bottom-sheet-button {
+  position: fixed;
+  width: 80%;
+  bottom: 1rem;
+  left: 2rem;
+  right: 2rem;
+}
+
+.triptych-active {
+  animation-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  background-color: #314ce0;
+  color: white !important;
+  padding: 10px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  transition: all 200ms ease-out;
+}
+
+.image-select {
+  margin-top: 5px;
+  margin-left: 5px;
+  position: absolute;
+  z-index: 1;
+  margin-top: 5px;
+  margin-left: 5px;
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  border-radius: 100px;
+  padding: 10px;
+}
+
+.custom-dropdown-item {
+  top: 100px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 6rem;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.item-recommended {
+  position: absolute;
+  z-index: 2;
+  margin-top: 10px;
+}
+.highlight-item {
+  // border: 5px solid white;
+  padding: 1rem;
+  transition: all 500ms;
+  border-radius: 2px;
+}
+.highlight-item:hover {
+  // border: 5px solid $primary;
+  background-color: white;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+  transition: border 500ms ease-out;
+  transition: all 500ms ease-out;
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: ease-out;
+  transition-delay: 0s;
+}
+
+.image-zoom-out:hover {
+  transform: scale(1.1);
+}
+.image-zoom-out {
+  transition: transform 0.2s; /* Animation */
+}
+
+.tab-content {
+  padding-bottom: 100px !important;
+}
+
+.loading {
+  width: 100%;
+  height: 100%;
+  margin-top: 200px;
+  text-align: center;
+  text-align: -webkit-center;
+}
+
+div.full-screen-dialog {
+  background-color: white;
+  top: 100px;
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+}
+
+.order-text {
+  // font-family: "Dancing Script", cursive !important;
+  font-family: "Kaushan Script", cursive;
+}
+
+.progress.is-xsmall {
+  height: 0.1rem;
+}
+
+.drop-shadow {
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+.border-rounded {
+  border-radius: 100px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+.button {
+  // box-shadow: -1px 0px 7px 0px rgba(0, 0, 0, 0.54);
+}
+
+.vue-notification {
+  padding: 10px;
+  margin: 0 5px 5px;
+
+  font-size: 12px;
+
+  color: #ffffff;
+  background: #44a4fc;
+  border-left: 5px solid #187fe7;
+
+  &.warn {
+    background: #ffb648;
+    border-left-color: #f48a06;
+  }
+
+  &.error {
+    background: #e54d42;
+    border-left-color: #b82e24;
+  }
+
+  &.success {
+    background: #68cd86;
+    border-left-color: #42a85f;
+  }
+
+  &.dark {
+    background: #222831;
+    border-left-color: #1b1b2f;
+  }
+}
+
+.cart-count {
+  position: absolute;
+  right: 17px;
+  background-color: $primary;
+  border: 2px solid white;
+  border-radius: 50px;
+  padding-right: 7px;
+  padding-left: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}

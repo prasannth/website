@@ -1,0 +1,21 @@
+{
+    "product_id": 123,
+    "selectedImageId": 123456,
+    "properties": [
+        {
+            "type": "Frames",
+            "typeId": 123,
+            "price": 50.0
+        },
+        {
+            "type": "Edge",
+            "typeId": 234,
+            "price": 50.0
+        },
+        {
+            "type": "Filter",
+            "typeId": 345,
+            "price": 50.0
+        }
+    ]
+}
